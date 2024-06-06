@@ -2,7 +2,7 @@ def smallest_multiple(target : list):
   
 #  problem link : https://datalemur.com/questions/python-smallest-multiple
   smallest_multiple_result = 1
-#  cara kerja sama seperti mencari kpk, jadi nilai[i] dimoduluskan dengan nilai[i + idx] dengan idx = 1..n dan  nilai[i + idx] mode nilai[i]  = 0 dan  nilai[i + idx] >  nilai[i[ maaka ubah  nilai[i] menjadi 1 begitupun sebaliknya
+#  cara kerja sama seperti mencari kpk, jadi nilai[i] dimoduluskan dengan nilai[i + idx] dengan idx = 1.. n -  1  dan  nilai[i + idx] mod nilai[i]   ==  0 dan  nilai[i + idx] >  nilai[i]  maaka ubah  nilai[i] menjadi 1 begitupun sebaliknya
   for i in range(len(target) - 1): 
     for j in range(i +1, len(target)): 
       if target[j] % target[i] == 0 and target[i] != 1 and target[j] > target[i]:
